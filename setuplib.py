@@ -238,14 +238,14 @@ class _DistinfoMixin:
 
         if not self.dry_run:
             with open(outfile, 'wb') as f:
-                f.write('# coding: utf-8\n')
-                f.write('\n')
+                f.write(b'# coding: utf-8\n')
+                f.write(b'\n')
                 for modname in imports:
-                    f.write('import %s\n' % modname)
+                    f.write(b'import %s\n' % modname)
                 if imports:
-                    f.write('\n')
+                    f.write(b'\n')
                 for k, v in distinfo:
-                    f.write('%s = "%s"\n' % (k, v))
+                    f.write(b'%s = "%s"\n' % (k, v))
 
 
 ###
