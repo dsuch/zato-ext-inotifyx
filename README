@@ -1,5 +1,5 @@
 
-*This fork of inotifyx is Python 3-friendly, works with both Python 2.7 and Python 3.4+.*
+**This fork of inotifyx is Python 3-friendly, works with both Python 2.7 and Python 3.4+.**
 
 inotifyx is a simple Python binding to the Linux inotify file system event
 monitoring API.
