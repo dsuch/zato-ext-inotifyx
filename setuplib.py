@@ -245,7 +245,8 @@ class _DistinfoMixin:
                 if imports:
                     f.write(b'\n')
                 for k, v in distinfo:
-                    f.write(b'%s = "%s"\n' % (k, v))
+                    line = '%s = "%s"\n' % (k, v)
+                    f.write(line.encode('utf8'))
 
 
 ###
