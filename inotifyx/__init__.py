@@ -120,35 +120,3 @@ def get_events(fd, *args):
     ]
 
 
-if __name__ == '__main__':
-    import sys
-
-    if len(sys.argv) == 1:
-        print >>sys.stderr, 'usage: inotify path [path ...]'
-        sys.exit(1)
-
-    paths = sys.argv[1:]
-
-    fd = init()
-
-    wd_to_path = {}
-
-    try:
-        for path in paths:
-            wd = add_watch(fd, path)
-            wd_to_path[wd] = path
-
-        try:
-            while True:
-                events = get_events(fd)
-                for event in events:
-                    path = wd_to_path[event.wd]
-                    parts = [event.get_mask_description()]
-                    if event.name:
-                        parts.append(event.name)
-                    print '%s: %s' % (path, ' '.join(parts))
-        except KeyboardInterrupt:
-            pass
-
-    finally:
-        os.close(fd)
