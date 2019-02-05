@@ -359,7 +359,6 @@ class install_data(_install_data):
 
     def _gen_data_files(self, base_dir, data_files):
         for arg in data_files:
-            print arg
             if isinstance(arg, basestring):
                 yield (base_dir, [arg])
             else:
