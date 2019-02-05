@@ -215,9 +215,10 @@ class _DistinfoMixin:
         return parts[:-1], parts[-1]
 
     def _prepare_distinfo_string(self, value):
-        if isinstance(value, str):
-            value = unicode(value)
-        return unicode(repr(value)).encode('utf-8')
+        #if isinstance(value, str):
+        #    value = unicode(value)
+        #return unicode(repr(value)).encode('utf-8')r
+        return value
 
     def _write_distinfo_module(self, outfile, distinfo = (), imports = ()):
         distinfo = list(distinfo)
