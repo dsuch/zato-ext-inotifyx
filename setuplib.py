@@ -1,7 +1,7 @@
 # Author: Forest Bond
 # This file is in the public domain.
 
-from __future__ import with_statement
+from __future__ import with_statement, unicode_literals
 
 import os, sys, shutil
 from tempfile import mkdtemp
