@@ -11,13 +11,12 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'modules'))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 
 
-from setuplib import setup
+from distutils.core import setup
 
-version = '0.3'
+version = '0.3.1'
 
 setup(
-  name = 'inotifyx',
-  distinfo_module = 'inotifyx.distinfo',
+  name = 'zato-ext-inotifyx',
   version = version,
   description = 'Simple Linux inotify bindings',
   author = 'Forest Bond',
